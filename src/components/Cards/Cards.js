@@ -3,52 +3,43 @@ import './Cards.css';
 import CardItem from './CardItem';
 
 export const Cards = (props) => {
+  console.log(props.blogs)
 
-  const [frontList, setFrontList] = useState(null)
+  const [cardList, setCardList] = useState(null)
 
   useEffect(() => {
-    checkFrontList(props.blogs);
     const temp = Object.keys(props.blogs).map((curr) => {
       return props.blogs[curr]
     })
+    checkCardList(temp);
   }, [props.blogs]);
 
-  const checkFrontList = (data) => {
-    const arr = Object.keys(data)
-    if (data) {
-      if (arr[arr.length - 2] && arr[arr.length - 1]) {
-        const prop1 = data[arr.length-2]
-        const prop2 = data[arr.length-1]
-        return setFrontList(
-        <ul className='cards__items'>
-          <CardItem
-            src={prop1.blogImg}
-            text={prop1.title}
-            label={prop1.tag}
-            path={`/${prop1.id}`}
-          />
-          <CardItem
-            src={prop2.blogImg}
-            text={prop2.title}
-            label={prop2.tag}
-            path={`/${prop2.id}`}
-          />
-        </ul>)
-      }
-      else if (data[data.length - 1] && !data[data.length - 2]) {
-        const prop = data[arr.length-1]
-        return setFrontList(
+  const checkCardList = (data) => {
+    setCardList(data.map((cur, i) => {
+      if (i%3===0) {
+        return (
           <ul className='cards__items'>
-            <CardItem
-              src={prop.blogImg}
-              text={prop.title}
-              label={prop.tag}
-              path={`/${prop.id}`}
-            />
+            {data[i] ? <CardItem 
+              src={data[i].blogImg}
+              text={data[i].title}
+              label={data[i].tag}
+              path={`/${data[i]._id}`}
+            /> : null}
+            {data[i+1] ? <CardItem 
+              src={data[i+1].blogImg}
+              text={data[i+1].title}
+              label={data[i+1].tag}
+              path={`/${data[i+1]._id}`}
+            /> : null}
+            {data[i+2] ? <CardItem 
+              src={data[i+2].blogImg}
+              text={data[i+2].title}
+              label={data[i+2].tag}
+              path={`/${data[i+2]._id}`}
+            /> : null}
           </ul>
-        )
-      }
-    }
+        )}
+    }));
   }
 
   return (
@@ -56,8 +47,7 @@ export const Cards = (props) => {
       <h1>Check out my PURFECT Collections!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
-          {frontList}
-          <ul className='cards__items'>
+        <ul className='cards__items'>
             <CardItem
               src='images/img-3.jpg'
               text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
@@ -77,46 +67,7 @@ export const Cards = (props) => {
               path='/sign-up'
             />
           </ul>
-          <ul className='cards__items'>
-            <CardItem
-              src='images/img-3.jpg'
-              text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-              label='Mystery'
-              path='/blogs'
-            />
-            <CardItem
-              src='images/img-4.jpg'
-              text='Experience Football on Top of the Himilayan Mountains'
-              label='Adventure'
-              path='/products'
-            />
-            <CardItem
-              src='images/img-8.jpg'
-              text='Ride through the Sahara Desert on a guided camel tour'
-              label='Adrenaline'
-              path='/sign-up'
-            />
-          </ul>
-          <ul className='cards__items'>
-            <CardItem
-              src='images/img-3.jpg'
-              text='Set Sail in the Atlantic Ocean visiting Uncharted Waters'
-              label='Mystery'
-              path='/blogs'
-            />
-            <CardItem
-              src='images/img-4.jpg'
-              text='Experience Football on Top of the Himilayan Mountains'
-              label='Adventure'
-              path='/products'
-            />
-            <CardItem
-              src='images/img-8.jpg'
-              text='Ride through the Sahara Desert on a guided camel tour'
-              label='Adrenaline'
-              path='/sign-up'
-            />
-          </ul>
+          {cardList}
         </div>
       </div>
     </div>
