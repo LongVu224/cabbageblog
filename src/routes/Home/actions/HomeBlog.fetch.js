@@ -30,7 +30,6 @@ export const fetchBlog = () => {
                 for (let key in res.data) {
                     fetchedBlog.push({
                         ...res.data[key],
-                        id: key
                     });
                 }
                 dispatch(fetchBlogSuccess(fetchedBlog));

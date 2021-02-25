@@ -1,19 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css'
 import { HeroSection } from '../../components/HeroSection'
 import { Cards} from "../../components/Cards"
 
 const Home = (props) => {
 
+    const [blogs, setBlogs] = useState([])
+
     useEffect(() => {
-        props.onFetchBlog();
+        props.onFetchBlog()
     }, [props.onFetchBlog]);
     
 
     return (
     <div>
         <HeroSection />
-        <Cards />
+        {props.blogs.data ? <Cards 
+            blogs = {props.blogs.data}
+        /> : null}
     </div>
     )
 }

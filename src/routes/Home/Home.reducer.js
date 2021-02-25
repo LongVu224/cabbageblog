@@ -1,9 +1,10 @@
 const initialState = {
-    blogs: [],
+    data: [],
     loading: true,
 };
 
 const reducer = (state = initialState, action) => {
+    //console.log(action)
     switch (action.type) {
         case 'FETCH_BLOG_START':
             return {
@@ -13,7 +14,7 @@ const reducer = (state = initialState, action) => {
         case 'FETCH_BLOG_SUCCESS':
             return {
                 ...state,
-                blogs: action.blog,
+                data: action.blog[0],
                 loading: false
             }
         case 'FETCH_BLOG_FAIL':
