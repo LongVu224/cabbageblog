@@ -2,11 +2,11 @@ import React from 'react';
 import {Navbar} from './components/Navbar';
 import {Footer} from './components/Footer';
 import './App.css';
-import Home from './components/pages/Home';
+import { Home } from './routes/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Blogs from './components/pages/Blogs';
-import Products from './components/pages/Products';
-import SignUp from './components/pages/SignUp';
+import Blogs from './routes/Blogs';
+import Products from './routes/Products';
+import SignUp from './routes/SignUp';
 
 function App() {
   return (
