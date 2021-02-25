@@ -17,6 +17,7 @@ h1 {
 }
 
 .cards__wrapper {
+  width: 100%;
   position: relative;
   margin: 50px 0 45px;
 }

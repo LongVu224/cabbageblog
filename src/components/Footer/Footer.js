@@ -21,10 +21,6 @@ export const Footer = () => {
         </div>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
-            <h2>Videos</h2>
-            <Link to='/'>Submit Video</Link>
-          </div>
-          <div className='footer-link-items'>
             <h2>Social Media</h2>
             <a href='https://www.instagram.com/bapcai.thetattooboi/'>Instagram</a>
             <a href='https://my-portfolio-886e5.web.app/'>Dad's Portfolio</a>
