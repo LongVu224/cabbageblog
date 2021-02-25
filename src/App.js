@@ -2,7 +2,7 @@ import React from 'react';
 import {Navbar} from './components/Navbar';
 import {Footer} from './components/Footer';
 import './App.css';
-import { Home } from './routes/Home';
+import Home from './routes/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Blogs from './routes/Blogs';
 import Products from './routes/Products';

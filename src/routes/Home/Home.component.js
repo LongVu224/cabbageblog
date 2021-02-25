@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Home.css'
 import { HeroSection } from '../../components/HeroSection'
 import { Cards} from "../../components/Cards"
 
-export const Home = () => {
+const Home = (props) => {
+
+    useEffect(() => {
+        props.onFetchBlog();
+    }, [props.onFetchBlog]);
+    
+
     return (
     <div>
         <HeroSection />
@@ -11,3 +17,5 @@ export const Home = () => {
     </div>
     )
 }
+
+export default Home;
