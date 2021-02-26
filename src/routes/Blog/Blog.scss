@@ -1,3 +1,7 @@
+.wrapper {
+  margin-bottom: 40px;
+}
+
 .blog-header {
   display: flex;
   height: 90vh;
@@ -13,7 +17,7 @@
 }
 
 .blog-post-header {
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   .blog-post-title {
     text-transform: uppercase;
     color: #666;
@@ -24,8 +28,11 @@
   .blog-post-date{
     color: #cacaca;
     float: right;
-    margin-top: 20px;
     font-size: 18px;
   }
 
+}
+
+.blog-post-tag {
+  margin-top: 30px
 }

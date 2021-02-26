@@ -20,6 +20,10 @@ export const Footer = () => {
           </div>
         </div>
         <div className='footer-link-wrapper'>
+        <div class='footer-link-items'>
+            <h2>Videos</h2>
+            <Link to='/trailer'>Trailer</Link>
+          </div>
           <div className='footer-link-items'>
             <h2>Social Media</h2>
             <a href='https://www.instagram.com/bapcai.thetattooboi/'>Instagram</a>
@@ -68,14 +72,13 @@ export const Footer = () => {
             >
               <i className='fab fa-twitter' />
             </Link>
-            <Link
+            <a
               className='social-icon-link twitter'
-              to='/'
-              target='_blank'
+              href='https://www.linkedin.com/in/longvu224/'
               aria-label='LinkedIn'
             >
               <i className='fab fa-linkedin' />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

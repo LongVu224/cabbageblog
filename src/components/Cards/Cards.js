@@ -3,8 +3,6 @@ import './Cards.css';
 import CardItem from './CardItem';
 
 export const Cards = (props) => {
-  console.log(props.blogs)
-
   const [cardList, setCardList] = useState(null)
 
   useEffect(() => {

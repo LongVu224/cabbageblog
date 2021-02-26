@@ -94,7 +94,7 @@
 }
 
 /* Social Icons */
-.social-icon-link {
+a.social-icon-link {
   color: #fff;
   font-size: 24px;
 }
@@ -120,10 +120,9 @@
   width: 240px;
 }
 
-.social-logo {
+a.social-logo {
   color: #fff;
   justify-self: start;
-  margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
