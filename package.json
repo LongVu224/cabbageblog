@@ -12,6 +12,7 @@
     "namor": "^2.0.2",
     "node-sass": "4.14.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.5.0",
     "react-dom": "^16.13.1",
     "react-items-carousel": "^2.8.0",
     "react-leaf-carousel": "^2.0.3",

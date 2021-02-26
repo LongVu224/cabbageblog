@@ -18,6 +18,14 @@ video {
   object-fit: contain;
 }
 
+.hero-image {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 .hero-container > h1 {
   color: #fff;
   font-size: 100px;

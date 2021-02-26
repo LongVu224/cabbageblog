@@ -18,10 +18,11 @@
   max-width: 1500px;
 }
 
-.navbar-logo {
+a.navbar-logo {
   color: #fff;
   justify-self: start;
   margin-left: 20px;
+  margin-bottom: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
@@ -49,7 +50,7 @@
   height: 80px;
 }
 
-.nav-links {
+a.nav-links {
   color: #fff;
   display: flex;
   align-items: center;
@@ -58,7 +59,7 @@
   height: 100%;
 }
 
-.nav-links:hover {
+a.nav-links:hover {
   border-bottom: 4px solid #fff;
   transition: all 0.2s ease-out;
 }
@@ -113,7 +114,7 @@
     border-radius: 0;
   }
 
-  .navbar-logo {
+  a.navbar-logo {
     position: absolute;
     top: 0;
     left: 0;

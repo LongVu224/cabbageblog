@@ -3,10 +3,11 @@ import '../../App.css';
 import { Button } from '../Button';
 import './HeroSection.css';
 
-export const HeroSection = () => {
+export const HeroSection = (props) => {
   return (
     <div className='hero-container'>
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
+      {props.img ? <img alt='' className="hero-image" src={props.img} /> : null}
+      {props.video ? <video src={props.video} autoPlay loop muted/> : null}
       <h1>ADVENTURE AWAITS</h1>
       <p>What are you waiting for?</p>
       <div className='hero-btns'>
@@ -14,6 +15,7 @@ export const HeroSection = () => {
           className='btns'
           buttonStyle='btn--primary'
           buttonSize='btn--large'
+          path='/trailer'
         >
           WATCH TRAILER <i className='far fa-play-circle' />
         </Button>

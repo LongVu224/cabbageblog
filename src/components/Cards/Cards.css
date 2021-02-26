@@ -33,7 +33,7 @@ h1 {
   border-radius: 10px;
 }
 
-.cards__item__link {
+a.cards__item__link {
   display: flex;
   flex-flow: column;
   width: 100%;

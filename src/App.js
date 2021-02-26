@@ -1,27 +1,24 @@
 import React from 'react';
 import {Navbar} from './components/Navbar';
 import {Footer} from './components/Footer';
-import './App.css';
 import Home from './routes/Home';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Blog from './routes/Blog';
+import { Trailer } from './routes/Trailer';
+import { BrowserRouter as Switch, Route, withRouter } from 'react-router-dom';
 import Blogs from './routes/Blogs';
-import Products from './routes/Products';
-import SignUp from './routes/SignUp';
 
 function App() {
   return (
-    <>
-      <Router>
+    <div>
+      <Switch>
         <Navbar />
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/blogs' component={Blogs} />
-          <Route path='/products' component={Products} />
-          <Route path='/sign-up' component={SignUp} />
-        </Switch>
+        <Route path='/trailer' component={Trailer} />
+        <Route path='/blogs' component={Blogs} />
+        <Route path='/blog/:id' component={Blog} />
+        <Route path='/' exact component={Home} />
         <Footer />
-      </Router>
-    </>
+      </Switch>
+    </div>
   );
 }
 
