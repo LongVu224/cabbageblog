@@ -18,24 +18,24 @@ export const Cards = (props) => {
     const arr = []
     for (let i = 0; i < data.length; i+=3) {
       if (i%3===0) {
-        arr.push(<ul className='cards__items'>
+        arr.unshift(<ul className='cards__items'>
+        {data[i+2] ? <CardItem 
+        src={data[i+2].blogImg}
+        text={data[i+2].title}
+        label={data[i+2].tag}
+        path={`/blog/${data[i+2]._id}`}
+        /> : null}
+        {data[i+1] ? <CardItem 
+        src={data[i+1].blogImg}
+        text={data[i+1].title}
+        label={data[i+1].tag}
+        path={`/blog/${data[i+1]._id}`}
+        /> : null}
         {data[i] ? <CardItem 
           src={data[i].blogImg}
           text={data[i].title}
           label={data[i].tag}
           path={`/blog/${data[i]._id}`}
-        /> : null}
-        {data[i+1] ? <CardItem 
-          src={data[i+1].blogImg}
-          text={data[i+1].title}
-          label={data[i+1].tag}
-          path={`/blog/${data[i+1]._id}`}
-        /> : null}
-        {data[i+2] ? <CardItem 
-          src={data[i+2].blogImg}
-          text={data[i+2].title}
-          label={data[i+2].tag}
-          path={`/blog/${data[i+2]._id}`}
         /> : null}
       </ul>)
       }
