@@ -1,0 +1,38 @@
+.wrapper {
+  margin-bottom: 40px;
+}
+
+.blog-header {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+}
+
+.blog-image {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.blog-post-header {
+  margin-bottom: 30px;
+  .blog-post-title {
+    text-transform: uppercase;
+    color: #666;
+    letter-spacing: 0.05em;
+    font-size: 25px;
+  }
+  
+  .blog-post-date{
+    color: #cacaca;
+    float: right;
+    font-size: 18px;
+  }
+
+}
+
+.blog-post-tag {
+  margin-top: 30px
+}
