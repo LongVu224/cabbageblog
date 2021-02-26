@@ -5,7 +5,7 @@ import { Cards} from "../../components/Cards"
 import { Spinner } from "../../components/Spinner"
 
 const Home = (props) => {
-    const video = '/videos/video-1.mp4'
+    const videoUrl = '/videos/header.mp4'
 
     useEffect(() => {
         window.scrollTo(0,0)
@@ -14,7 +14,7 @@ const Home = (props) => {
     
     return (
     <div>
-        <HeroSection video={video}/>
+        <HeroSection video={videoUrl}/>
         {props.blogs.loading ? 
             <Spinner /> : 
             <Cards 

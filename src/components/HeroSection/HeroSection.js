@@ -8,8 +8,8 @@ export const HeroSection = (props) => {
     <div className='hero-container'>
       {props.img ? <img alt='' className="hero-image" src={props.img} /> : null}
       {props.video ? <video src={props.video} autoPlay loop muted/> : null}
-      <h1>ADVENTURE AWAITS</h1>
-      <p>What are you waiting for?</p>
+      <p>All you need is</p>
+      <h1>LOVE AND A CAT</h1>
       <div className='hero-btns'>
         <Button
           className='btns'
