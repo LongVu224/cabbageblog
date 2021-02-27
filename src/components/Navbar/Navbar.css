@@ -50,7 +50,11 @@ a.navbar-logo {
   height: 80px;
 }
 
-a.nav-links {
+.nav-welcome {
+  margin-bottom: 0;
+}
+
+a.nav-links, .nav-welcome  {
   color: #fff;
   display: flex;
   align-items: center;

@@ -5,10 +5,13 @@ import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware, compose, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
+import history from './components/helper/history';
 
 import App from './App';
+import navbarReducer from './components/Navbar/Navbar.reducer';
 import homeReducer from './routes/Home/Home.reducer';
 import blogReducer from './routes/Blog/Blog.reducer';
+import signInReducer from './routes/SignIn/SignIn.reducer';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -16,6 +19,8 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const RootReducer = combineReducers({
     blogs: homeReducer,
     blog: blogReducer,
+    token: signInReducer,
+    logged: navbarReducer
 })
 
 //apply middleware
@@ -25,7 +30,7 @@ const store = createStore(RootReducer, composeEnhancers(
 
 const app = (
     <Provider store={store}>
-        <BrowserRouter>
+        <BrowserRouter history={history}>
             <App />
         </BrowserRouter>
     </Provider>

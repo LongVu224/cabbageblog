@@ -1,0 +1,1 @@
+export { fetchLogged } from './logged.fetch'

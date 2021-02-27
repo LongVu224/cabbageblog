@@ -9,6 +9,7 @@
     "axios": "^0.21.1",
     "body-scroll-lock": "^3.1.5",
     "bootstrap": "^4.6.0",
+    "history": "^5.0.0",
     "lodash": "^4.17.21",
     "namor": "^2.0.2",
     "node-sass": "4.14.1",
