@@ -9796,6 +9796,11 @@ react-transition-group@^4.4.1:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
+react-under-construction@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-under-construction/-/react-under-construction-0.3.0.tgz#d0b9158a02a0bb9a43fe5c80e9cf71152d124ae1"
+  integrity sha512-OJZPAI2UXFZTRcDwDo0YONZd3mD78cwxC46ti/XYreVN83Z10ZTWCyrGlrQ8Ft1SdwG7BeF60CpEUg1RT7BQwQ==
+
 react@16.8.1:
   version "16.8.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.1.tgz#ae11831f6cb2a05d58603a976afc8a558e852c4a"

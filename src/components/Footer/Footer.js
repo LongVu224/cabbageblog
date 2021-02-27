@@ -9,9 +9,9 @@ export const Footer = () => {
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
             <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Terms of Service</Link>
+            <Link to='/coming'>How it works</Link>
+            <Link to='/coming'>Testimonials</Link>
+            <Link to='/coming'>Terms of Service</Link>
           </div>
           <div className='footer-link-items'>
             <h2>Contact Me</h2>
@@ -40,11 +40,11 @@ export const Footer = () => {
               <i className='fas fa-paw' />
             </Link>
           </div>
-          <small className='website-rights'>Cabbage © 2021</small>
+          <small className='website-rights'>© Copyright 2021 Cabbage</small>
           <div className='social-icons'>
             <Link
               className='social-icon-link facebook'
-              to='/'
+              to='/coming'
               target='_blank'
               aria-label='Facebook'
             >
@@ -59,7 +59,7 @@ export const Footer = () => {
             </a>
             <Link
               className='social-icon-link youtube'
-              to='/'
+              to='/coming'
               target='_blank'
               aria-label='Youtube'
             >
@@ -67,7 +67,7 @@ export const Footer = () => {
             </Link>
             <Link
               className='social-icon-link twitter'
-              to='/'
+              to='/coming'
               target='_blank'
               aria-label='Twitter'
             >

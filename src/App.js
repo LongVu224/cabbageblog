@@ -6,6 +6,7 @@ import Blog from './routes/Blog';
 import Blogs from './routes/Blogs';
 import SignIn from './routes/SignIn';
 import { Trailer } from './routes/Trailer';
+import { Construction } from './routes/Construction';
 import { BrowserRouter as Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <div>
       <Switch>
         <Navbar />
+        <Route path='/coming' component={Construction} />
         <Route path='/sign-in' component={SignIn} />
         <Route path='/trailer' component={Trailer} />
         <Route path='/blogs' component={Blogs} />

@@ -6,6 +6,7 @@
 .blog-img {
     width: 200px;
     height: 150px;
+    border-radius: 5px;
 }
 
 .wrap {
@@ -82,7 +83,8 @@
           color: #FFF;
           font-weight: normal;
       }
-      & .blog-arrow {
+      & div.blog-arrow {
+          color: black;
           margin-top: 20px;
           width: 20%;
           box-sizing: border-box;
@@ -93,14 +95,14 @@
           transition: all 1s ease 0s;
           transform: rotate(0deg);
       }
-      & .blog-arrow .fa {
+      & div.blog-arrow .fa {
           font-size: 115px;
           vertical-align: middle;
           transition: all 1s ease 0s;
       }
   }
   
-.blog-row:hover {
+div.blog-row:hover {
     .blog-overlay {
         width: 100%;
     }

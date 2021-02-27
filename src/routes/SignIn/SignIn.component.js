@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import  { Redirect } from 'react-router-dom'
 import './SignIn.scss';
 
@@ -10,6 +10,10 @@ const SignIn = (props) => {
         e.preventDefault();
         props.onUserSignIn({username: username, password: password})
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    })
 
     if (!props.token.fail) {
         return <Redirect to='/'  />

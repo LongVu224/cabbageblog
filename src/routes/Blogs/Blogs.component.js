@@ -13,12 +13,11 @@ const Blogs = (props) => {
     <div className="blog-root">
         {props.blogs.loading ? 
             <Spinner /> : 
-        console.log(props.blogs.data)}
-
-        <div className="wrap container">
+            <div className="wrap container">
             <h1 class="background"><span>Cabbage Collections</span></h1>
             {props.blogs.data.map(blog => 
                 <div className="blog-row">
+                    <a href={'/blog/' + blog._id}>
                     <div className="blog-overlay"></div>
                     <div className="blog-icon">
                         <img className="blog-img" src={blog.blogImg} />
@@ -31,9 +30,10 @@ const Blogs = (props) => {
                     <div class="blog-arrow">
                         <i class="fa fa-angle-right"></i>
                     </div>
+                    </a>
                 </div>
             )}
-        </div>
+        </div>}
     </div>
     )
 }
