@@ -29,7 +29,6 @@ video {
 .hero-container > h1 {
   color: #fff;
   font-size: 100px;
-  margin-top: -100px;
 }
 
 .hero-container > p {
@@ -38,6 +37,7 @@ video {
   font-size: 32px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
+    margin-top: -100px;
 }
 
 .hero-btns {
