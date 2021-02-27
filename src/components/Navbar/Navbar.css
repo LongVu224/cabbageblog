@@ -140,6 +140,13 @@ a.nav-links:hover {
     font-size: 2rem;
   }
 
+  .nav-welcome {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
   .nav-links-mobile {
     display: block;
     text-align: center;

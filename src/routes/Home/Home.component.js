@@ -15,10 +15,10 @@ const Home = (props) => {
     return (
     <div>
         <HeroSection video={videoUrl}/>
-        {props.blogs.loading ? 
+        {props.home.loading ? 
             <Spinner /> : 
             <Cards 
-                blogs = {props.blogs.data}
+                blogs = {props.home.data}
             />}
     </div>
     )

@@ -28,6 +28,7 @@ export const Footer = () => {
             <h2>Social Media</h2>
             <a href='https://www.instagram.com/bapcai.thetattooboi/'>Instagram</a>
             <a href='https://my-portfolio-886e5.web.app/'>Dad's Portfolio</a>
+            <a href='https://www.linkedin.com/in/trang-h-ta-488334196/'>Mom's LinkedIn</a>
           </div>
         </div>
       </div>

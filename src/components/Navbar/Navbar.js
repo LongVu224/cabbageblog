@@ -68,15 +68,17 @@ const Navbar = (props) => {
               </li>
             : null}
 
-            <li>
-              <Link
-                to='/sign-in'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                Sign In
-              </Link>
-            </li>
+            {!isLogged ? 
+              <li>
+                <Link
+                  to='/sign-in'
+                  className='nav-links-mobile'
+                  onClick={closeMobileMenu}
+                >
+                  Sign In
+                </Link>
+              </li>
+            : null }
           </ul>
           {button && !isLogged ? 
             <Button path='/sign-in' buttonStyle='btn--outline'>SIGN IN</Button>

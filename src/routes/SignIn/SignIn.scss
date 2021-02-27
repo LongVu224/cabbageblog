@@ -1,10 +1,14 @@
 div.login-container{
+    background-image: url('/images/login.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display:flex;
     align-items:center;
     justify-content:center;
     height:90vh;
     width:100%;
-    background:linear-gradient(to left, rgb(28, 27, 27), white);
+    //background:linear-gradient(to left, rgb(28, 27, 27), white);
     margin:0;
     padding:0;
     box-sizing:border-box;

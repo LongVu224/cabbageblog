@@ -3,10 +3,10 @@ import Navbar from './components/Navbar';
 import {Footer} from './components/Footer';
 import Home from './routes/Home';
 import Blog from './routes/Blog';
+import Blogs from './routes/Blogs';
 import SignIn from './routes/SignIn';
 import { Trailer } from './routes/Trailer';
 import { BrowserRouter as Switch, Route } from 'react-router-dom';
-import Blogs from './routes/Blogs';
 
 function App() {
   return (
