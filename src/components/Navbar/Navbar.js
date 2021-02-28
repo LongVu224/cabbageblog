@@ -62,6 +62,15 @@ const Navbar = (props) => {
                 Collections
               </Link>
             </li>
+            <li className='nav-item'>
+              <Link
+                to='/info'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Info
+              </Link>
+            </li>
             {isLogged ? 
               <li className='nav-welcome'>
                 Welcome back, meow

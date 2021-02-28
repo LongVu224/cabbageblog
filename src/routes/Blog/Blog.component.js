@@ -14,7 +14,6 @@ const Blog = (props) => {
     }, [props.onFetchBlog])
 
     const {title, text, date, tag, blogImg} = props.blog.data
-    console.log(blogImg)
 
     const slider = (
         <AwesomeSlider cssModule={AwesomeSliderStyles}>

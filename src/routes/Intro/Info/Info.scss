@@ -1,0 +1,144 @@
+.info-root {
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+}
+
+.info-header {
+    padding-top: 40px;
+}
+
+.info-row {
+    position: relative;
+    overflow: hidden;
+    height: 430px auto;
+    width: 100%;
+    display: flex;
+    line-height: 2;
+    margin-left: 110px;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    animation-name: animateIn;
+    animation-duration: 600ms;
+    animation-delay: calc(var(--animation-order) * 100ms);
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes animateIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.6) translateY(-8px);
+    }
+    
+    100% {
+      opacity: 1;
+    }
+  }
+
+.info-img img {
+    width: 50%;
+    height: 400px;
+    width: 400px;
+    border-radius: 25px;
+}
+
+.img1, .img3 {
+    float: right;
+    padding-left: 100px;
+}
+
+.img3 img {
+    height: 450px;
+}
+
+.img2 img {
+    float: left;
+    height: 450px;
+    margin-right: 70px;
+}
+
+.info-text {
+    width: 30%;
+    font-size: 20px;
+    height: 200px;
+    text-align: center;
+}
+
+.text1 {
+    margin-top: 110px;
+}
+
+.text2, .text3 {
+    margin-top: 70px;
+}
+
+.text1, .text3 {
+    float: left;
+}
+
+.text2 {
+    float: right;
+}
+
+.info-header h1 {
+    font-size: 70px;
+    letter-spacing: 0.05em;
+    font-family: 'Dancing Script', cursive;
+}
+
+.info-header {
+    color: rgba(255,255,255,0.1);
+    background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+    background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+    background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
+    -webkit-background-size: 125px 100%;
+    -moz-background-size: 125px 100%;
+    background-size: 125px 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-animation-name: shimmer;
+    -moz-animation-name: shimmer;
+    animation-name: shimmer;
+    -webkit-animation-duration: 4s;
+    -moz-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+@-moz-keyframes shimmer {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+  @-webkit-keyframes shimmer {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+  @-o-keyframes shimmer {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+  @keyframes shimmer {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }

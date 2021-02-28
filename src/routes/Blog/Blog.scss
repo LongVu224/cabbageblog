@@ -4,7 +4,8 @@
 
 .blog-header {
   display: flex;
-  height: 100vh;
+  min-height: 70vh;
+  height: auto;
   justify-content: center;
 }
 
