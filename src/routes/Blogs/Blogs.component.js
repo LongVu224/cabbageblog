@@ -20,7 +20,7 @@ const Blogs = (props) => {
                     <a href={'/blog/' + blog._id}>
                     <div className="blog-overlay"></div>
                     <div className="blog-icon">
-                        <img className="blog-img" src={blog.blogImg} />
+                        <img className="blog-img" src={blog.blogImg ? blog.blogImg[0] : null} />
                     </div>
                     <div class="blog-content">
                         <h3>{blog.title}</h3>
