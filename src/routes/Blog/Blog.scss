@@ -4,17 +4,23 @@
 
 .blog-header {
   display: flex;
-  height: 90vh;
+  height: 100vh;
   justify-content: center;
-  background-color: #DCE1E3;
+}
+
+.blog-body {
+  margin-top: 70px;
 }
 
 .blog-image {
     padding: 0;
     display: block;
-    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
     max-height: 100%;
     max-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .blog-post-header {
@@ -37,3 +43,19 @@
 .blog-post-tag {
   margin-top: 30px
 }
+
+.aws-btn {
+  --slider-height-percentage: 60%;
+  --slider-transition-duration: 455ms;
+  --organic-arrow-thickness: 11px;
+  --organic-arrow-border-radius: 12px;
+  --organic-arrow-height: 52px;
+  --organic-arrow-color: #538bd5;
+  --control-button-width: 18%;
+  --control-button-height: 25%;
+  --control-button-background: transparent;
+  --control-bullet-color: #62a4fa;
+  --control-bullet-active-color: #538bd5;
+  --loader-bar-color: #851515;
+  --loader-bar-height: 7px;
+  }  

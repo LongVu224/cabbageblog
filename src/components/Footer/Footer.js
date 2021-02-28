@@ -20,7 +20,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className='footer-link-wrapper'>
-        <div class='footer-link-items'>
+        <div className='footer-link-items'>
             <h2>Videos</h2>
             <Link to='/trailer'>Trailer</Link>
           </div>

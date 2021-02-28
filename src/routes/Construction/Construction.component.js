@@ -18,7 +18,7 @@ export const Construction = () => {
                 <div className="construc-form">
                     <input  type="text" 
                             className="construct-input" 
-                            placeholder="Name" />
+                            placeholder="Email" />
                     <button class="construct-button" name="subscribe">
                         Subscribe
                     </button>

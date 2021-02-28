@@ -18,19 +18,19 @@ export const Cards = (props) => {
       if (i%3===0) {
         arr.unshift(<ul className='cards__items'>
         {data[i+2] ? <CardItem 
-        src={data[i+2].blogImg}
+        src={data[i+2].blogImg ? data[i+2].blogImg[0] : null}
         text={data[i+2].title}
         label={data[i+2].tag}
         path={`/blog/${data[i+2]._id}`}
         /> : null}
         {data[i+1] ? <CardItem 
-        src={data[i+1].blogImg}
+        src={data[i+1].blogImg ? data[i+1].blogImg[0] : null}
         text={data[i+1].title}
         label={data[i+1].tag}
         path={`/blog/${data[i+1]._id}`}
         /> : null}
         {data[i] ? <CardItem 
-          src={data[i].blogImg}
+          src={data[i].blogImg ? data[i].blogImg[0] : null}
           text={data[i].title}
           label={data[i].tag}
           path={`/blog/${data[i]._id}`}
