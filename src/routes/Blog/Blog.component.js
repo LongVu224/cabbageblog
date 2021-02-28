@@ -1,4 +1,7 @@
 import React, { useEffect } from 'react'
+import AwesomeSlider from 'react-awesome-slider';
+import AwesomeSliderStyles from 'react-awesome-slider/src/styles';
+import 'react-awesome-slider/dist/styles.css';
 import './Blog.scss';
 import Badge from 'react-bootstrap/Badge'
 import { Spinner } from '../../components/Spinner'
@@ -11,6 +14,17 @@ const Blog = (props) => {
     }, [props.onFetchBlog])
 
     const {title, text, date, tag, blogImg} = props.blog.data
+    console.log(blogImg)
+
+    const slider = (
+        <AwesomeSlider cssModule={AwesomeSliderStyles}>
+            {blogImg ? blogImg.map(img => (
+                <div className="">
+                    <img alt='' className='blog-image' src={img} />
+                </div>
+            )) : null}
+        </AwesomeSlider>
+      );
     
     return (
     <div className="wrapper">
@@ -18,7 +32,7 @@ const Blog = (props) => {
         <Spinner /> :
         <div>
             <div className='blog-header'>
-                <img alt='' className='blog-image' src={blogImg} />
+                {slider}
             </div>
             <div className='blog-body container col-sm-12 col-md-8'>
                 <div className='blog-post'>
