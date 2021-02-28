@@ -9,6 +9,7 @@ import history from './components/helper/history';
 
 import App from './App';
 import navbarReducer from './components/Navbar/Navbar.reducer';
+import uploadReducer from './routes/Upload/Upload.reducer';
 import homeReducer from './routes/Home/Home.reducer';
 import blogsReducer from './routes/Blogs/Blogs.reducer';
 import blogReducer from './routes/Blog/Blog.reducer';
@@ -22,7 +23,8 @@ const RootReducer = combineReducers({
     blogs: blogsReducer,
     blog: blogReducer,
     token: signInReducer,
-    logged: navbarReducer
+    logged: navbarReducer,
+    upload: uploadReducer
 })
 
 //apply middleware

@@ -3050,6 +3050,13 @@ binary-extensions@^2.0.0:
   resolved "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.2.0.tgz"
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
 
+bindings@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/bindings/-/bindings-1.5.0.tgz#10353c9e945334bc0511a6d90b38fbc7c9c504df"
+  integrity sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==
+  dependencies:
+    file-uri-to-path "1.0.0"
+
 block-stream@*:
   version "0.0.9"
   resolved "https://registry.npmjs.org/block-stream/-/block-stream-0.0.9.tgz"
@@ -3284,7 +3291,7 @@ bytes@3.0.0:
   resolved "https://registry.npmjs.org/bytes/-/bytes-3.0.0.tgz"
   integrity sha1-0ygVQE1olpn4Wk6k+odV3ROpYEg=
 
-bytes@3.1.0:
+bytes@3.1.0, bytes@^3.0.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/bytes/-/bytes-3.1.0.tgz"
   integrity sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
@@ -5323,6 +5330,16 @@ file-loader@6.1.1:
   dependencies:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
+
+file-uri-to-path@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz#553a7b8446ff6f684359c445f1e37a05dacc33dd"
+  integrity sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
+
+filepond@^4.25.1:
+  version "4.25.1"
+  resolved "https://registry.yarnpkg.com/filepond/-/filepond-4.25.1.tgz#426e7cce3d0cdccb2d5623bedc5a8db772ae167b"
+  integrity sha512-8UPPTzfpHZRUtJl3dEcGMLYOygg8taJZpYTv1WaEkvzeI+X0JX9+agMJ+5Lu1EKtdt9dGq/9Gud+EnNRBaGl1A==
 
 filesize@6.1.0:
   version "6.1.0"
@@ -7964,7 +7981,7 @@ namor@^2.0.2:
   dependencies:
     crypto-extra "1.0.1"
 
-nan@^2.13.2:
+nan@^2.12.1, nan@^2.13.2:
   version "2.14.2"
   resolved "https://registry.npmjs.org/nan/-/nan-2.14.2.tgz"
   integrity sha512-M2ufzIiINKCuDfBSAUr1vWQ+vuVcA9kqx8JJUsbQi6yf1uGRyb7HfpdfUr5qLXf3B/t8dPvcjhKMmlfnP47EzQ==
@@ -9783,6 +9800,14 @@ react-bootstrap@^1.5.0:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
+react-butterfiles@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/react-butterfiles/-/react-butterfiles-1.3.3.tgz#1e9c9879d9c676883625fa17cdafd1fcc432d21c"
+  integrity sha512-Fd6oGkG0V75a54pCRbVN1IOR9bXO2xVpKCDsGHMGJaAq6AOFgzFtGx31CHn2KL9Eg1Zcwi3ZAb88qv43AxO30Q==
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+    bytes "^3.0.0"
+
 react-dev-utils@^11.0.3:
   version "11.0.3"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-11.0.3.tgz#b61ed499c7d74f447d4faddcc547e5e671e97c08"
@@ -9832,6 +9857,11 @@ react-fast-compare@^3.0.1:
   version "3.2.0"
   resolved "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-3.2.0.tgz"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
+
+react-filepond@^7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/react-filepond/-/react-filepond-7.1.1.tgz#467aa45051da5dbbca03a2ce58d2aacbbcfbb0e9"
+  integrity sha512-6Szyi3zY4AEiSlE5rztJov/xIDB107Sv31MctDoSutdLinMqmbMej6kJ2MtSGzAhsP2+h8cDDr51mdHNXt97Yw==
 
 react-is@^16.12.0, react-is@^16.13.1, react-is@^16.3.2, react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.13.1"

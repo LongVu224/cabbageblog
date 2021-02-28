@@ -78,8 +78,20 @@ const Navbar = (props) => {
                   Sign In
                 </Link>
               </li>
-            : null }
+            : 
+            <li>
+              <Link
+                to='/upload'
+                className='nav-links-mobile upload-btn'
+                onClick={closeMobileMenu}
+              >
+                Upload Blog
+              </Link>
+            </li>}
           </ul>
+          {button && isLogged ? 
+            <Button path='/upload' buttonStyle='btn--outline'>Upload Blog</Button>
+            : null }
           {button && !isLogged ? 
             <Button path='/sign-in' buttonStyle='btn--outline'>SIGN IN</Button>
             : null }

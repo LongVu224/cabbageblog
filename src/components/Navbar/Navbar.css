@@ -162,6 +162,10 @@ a.nav-links:hover {
     transition: all 0.3s ease-out;
   }
 
+  .upload-btn {
+    margin-bottom: 130px;
+  }
+
   .nav-links-mobile:hover {
     background: #fff;
     color: #242424;
