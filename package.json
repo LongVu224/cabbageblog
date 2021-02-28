@@ -9,6 +9,7 @@
     "axios": "^0.21.1",
     "body-scroll-lock": "^3.1.5",
     "bootstrap": "^4.6.0",
+    "history": "^5.0.0",
     "lodash": "^4.17.21",
     "namor": "^2.0.2",
     "node-sass": "4.14.1",
@@ -22,6 +23,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-slick": "^0.28.0",
+    "react-under-construction": "^0.3.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1"

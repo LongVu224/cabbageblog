@@ -3,9 +3,10 @@ import { Button } from '../Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-export const Navbar = () => {
+const Navbar = (props) => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const [isLogged, setIsLogged] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -20,7 +21,10 @@ export const Navbar = () => {
 
   useEffect(() => {
     showButton();
-  }, []);
+    if(props.token.data.length > 0) {
+      setIsLogged(true)
+    }
+  }, [props.token.data]);
 
   window.addEventListener('resize', showButton);
 
@@ -58,20 +62,31 @@ export const Navbar = () => {
                 Collections
               </Link>
             </li>
+            {isLogged ? 
+              <li className='nav-welcome'>
+                Welcome back, meow
+              </li>
+            : null}
 
-            <li>
-              <Link
-                to='/sign-up'
-                className='nav-links-mobile'
-                onClick={closeMobileMenu}
-              >
-                Sign Up
-              </Link>
-            </li>
+            {!isLogged ? 
+              <li>
+                <Link
+                  to='/sign-in'
+                  className='nav-links-mobile'
+                  onClick={closeMobileMenu}
+                >
+                  Sign In
+                </Link>
+              </li>
+            : null }
           </ul>
-          {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+          {button && !isLogged ? 
+            <Button path='/sign-in' buttonStyle='btn--outline'>SIGN IN</Button>
+            : null }
         </div>
       </nav>
     </>
   );
 }
+
+export default Navbar;
