@@ -6,13 +6,16 @@ export const Cards = (props) => {
   const [cardList, setCardList] = useState(null)
 
   useEffect(() => {
-    const temp = Object.keys(props.blogs).map((curr) => {
-      return props.blogs[curr]
-    })
-    checkCardList(temp);
+    if (props.blogs) {
+      const temp = Object.keys(props.blogs).map((curr) => {
+        return props.blogs[curr]
+      })
+      checkCardList(temp);
+    }
   }, [props.blogs]);
 
   const checkCardList = (data) => {
+    if (!data) return null
     const arr = []
     for (let i = 0; i < data.length; i+=3) {
       if (i%3===0) {

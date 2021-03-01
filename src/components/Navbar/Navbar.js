@@ -71,11 +71,6 @@ const Navbar = (props) => {
                 Info
               </Link>
             </li>
-            {isLogged ? 
-              <li className='nav-welcome'>
-                Welcome back, meow
-              </li>
-            : null}
 
             {!isLogged ? 
               <li>

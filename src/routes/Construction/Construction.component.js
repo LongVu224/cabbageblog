@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Construction.scss'
 import { Modal } from '../../components/Modal2/Modal'
 
@@ -6,6 +6,10 @@ const Construction = (props) => {
 
     const [email, setEmail] = useState('')
     const [showModal, setShowModal] = useState(false);
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    })
 
     const openModal = () => {
         setShowModal(prev => !prev);
