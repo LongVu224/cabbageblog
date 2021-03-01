@@ -62,11 +62,15 @@ const Navbar = (props) => {
                 Collections
               </Link>
             </li>
-            {isLogged ? 
-              <li className='nav-welcome'>
-                Welcome back, meow
-              </li>
-            : null}
+            <li className='nav-item'>
+              <Link
+                to='/info'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Info
+              </Link>
+            </li>
 
             {!isLogged ? 
               <li>
@@ -78,8 +82,20 @@ const Navbar = (props) => {
                   Sign In
                 </Link>
               </li>
-            : null }
+            : 
+            <li>
+              <Link
+                to='/upload'
+                className='nav-links-mobile upload-btn'
+                onClick={closeMobileMenu}
+              >
+                Upload Blog
+              </Link>
+            </li>}
           </ul>
+          {button && isLogged ? 
+            <Button path='/upload' buttonStyle='btn--outline'>Upload Blog</Button>
+            : null }
           {button && !isLogged ? 
             <Button path='/sign-in' buttonStyle='btn--outline'>SIGN IN</Button>
             : null }

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 //Availability base url
 const instance = axios.create({
-    baseURL: `http://localhost:4000/`
+    baseURL: `https://still-hollows-50555.herokuapp.com/`
 });
 
 export default instance;

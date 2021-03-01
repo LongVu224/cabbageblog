@@ -1,41 +1,92 @@
-.construct-wrap {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/construction.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.info-root {
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+}
+
+.info-header {
+    padding-top: 40px;
+}
+
+.info-row {
+    position: relative;
+    overflow: hidden;
+    height: 430px auto;
     width: 100%;
-    height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    line-height: 2;
+    margin-left: 110px;
+    margin-top: 40px;
+    padding-bottom: 40px;
+    animation-name: animateIn;
+    animation-duration: 600ms;
+    animation-delay: calc(var(--animation-order) * 100ms);
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes animateIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.6) translateY(-8px);
+    }
+    
+    100% {
+      opacity: 1;
+    }
+  }
+
+.info-img img {
+    width: 50%;
+    height: 400px;
+    width: 400px;
+    border-radius: 25px;
+}
+
+.img1, .img3 {
+    float: right;
+    padding-left: 100px;
+}
+
+.img3 img {
+    height: 450px;
+}
+
+.img2 img {
+    float: left;
+    height: 450px;
+    margin-right: 70px;
+}
+
+.info-text {
+    width: 30%;
+    font-size: 20px;
+    height: 200px;
     text-align: center;
-    min-height: 90vh;
 }
 
-.construct-content {
-    min-height: 10px;
-    width: 90%;
+.text1 {
+    margin-top: 110px;
 }
 
-.construct-desc {
-    margin-bottom: 0;
-    font-family: 'Montserrat', sans-serif;
+.text2, .text3 {
+    margin-top: 70px;
 }
 
-.construct-text {
-    font-size: 30px;
-    font-weight: 100;
-    color: white;
+.text1, .text3 {
+    float: left;
 }
 
-.construct-title {
+.text2 {
+    float: right;
+}
+
+.info-header h1 {
+    font-size: 70px;
     letter-spacing: 0.05em;
-    font-size: 50px;
     font-family: 'Dancing Script', cursive;
 }
 
-.construct-title {
+.info-header {
     color: rgba(255,255,255,0.1);
     background: -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
     background: -moz-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff));
@@ -91,28 +142,3 @@
       background-position: top right;
     }
   }
-
-.construct-form {
-    margin-top: 30px;
-}
-
-.construct-input {
-    font-family: 'Montserrat', sans-serif;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    width: 300px;
-    border-radius: 35px;
-    padding: 15px;
-    margin-right: 20px;
-    text-align: center;
-}
-
-.construct-button {
-    font-family: 'Montserrat', sans-serif;
-    width: 130px;
-    padding: 15px;
-    border: none;
-    border-radius: 35px;
-    color: white;
-    background-color: #f6f0c4;
-    background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
-}
