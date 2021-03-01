@@ -8,8 +8,10 @@ import thunk from 'redux-thunk';
 import history from './components/helper/history';
 
 import App from './App';
+import footerReducer from './components/Footer/Footer.reducer'
 import navbarReducer from './components/Navbar/Navbar.reducer';
 import uploadReducer from './routes/Upload/Upload.reducer';
+import constructionReducer from './routes/Construction/Construction.reducer';
 import homeReducer from './routes/Home/Home.reducer';
 import blogsReducer from './routes/Blogs/Blogs.reducer';
 import blogReducer from './routes/Blog/Blog.reducer';
@@ -24,7 +26,9 @@ const RootReducer = combineReducers({
     blog: blogReducer,
     token: signInReducer,
     logged: navbarReducer,
-    upload: uploadReducer
+    upload: uploadReducer,
+    footer: footerReducer,
+    construction: constructionReducer
 })
 
 //apply middleware

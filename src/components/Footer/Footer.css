@@ -14,7 +14,7 @@
   align-items: center;
   text-align: center;
 
-  margin-bottom: 24px;
+  margin-bottom: 5px;
   padding: 24px;
   color: #fff;
 }
@@ -41,7 +41,6 @@
   outline: none;
   border: none;
   font-size: 18px;
-  margin-bottom: 16px;
   border: 1px solid #fff;
 }
 

@@ -1,14 +1,25 @@
-import React, {useEffect} from 'react'
+import React, { useState } from 'react'
 import './Construction.scss'
+import { Modal } from '../../components/Modal2/Modal'
 
-export const Construction = () => {
+const Construction = (props) => {
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    })
+    const [email, setEmail] = useState('')
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal(prev => !prev);
+    };
+
+    const handleSubcribe = (e) => {
+        e.preventDefault();
+        props.onEmailSubcribe({email: email})
+        openModal();
+    }
 
     return (
         <div className="construct-wrap">
+            <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className="construct-content">
                 <div className="construct-text">
                     <h1 className="construct-title">COMING SOON</h1>
@@ -18,8 +29,9 @@ export const Construction = () => {
                 <div className="construc-form">
                     <input  type="text" 
                             className="construct-input" 
+                            onChange={(e) => setEmail(e.target.value)} 
                             placeholder="Email" />
-                    <button class="construct-button" name="subscribe">
+                    <button class="construct-button" name="subscribe" onClick={handleSubcribe}>
                         Subscribe
                     </button>
                 </div>
@@ -27,3 +39,5 @@ export const Construction = () => {
         </div>
     )
 }
+
+export default Construction;

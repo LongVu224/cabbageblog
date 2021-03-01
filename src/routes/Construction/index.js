@@ -1,1 +1,2 @@
-export * from './Construction.component'
+import Container from './Construction.container'
+export default Container

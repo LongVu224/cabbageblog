@@ -1,10 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Footer.css';
 import { Link } from 'react-router-dom';
+import { Button } from '../Button';
 
-export const Footer = () => {
+const Footer = (props) => {
+
+  const [email, setEmail] = useState('')
+
+  const handleSubcribe = (e) => {
+    e.preventDefault();
+    props.onEmailSubcribe({email: email})
+    props.openModal();
+  }
+
   return (
     <div className='footer-container'>
+      <section className='footer-subscription'>
+        <p className='footer-subscription-heading'>
+          Join the Cabbage Gang to receive our newsletter.
+        </p>
+        <div className='input-areas'>
+          <form>
+            <input
+              className='footer-input'
+              onChange={(e) => setEmail(e.target.value)} 
+              name='email'
+              type='email'
+              placeholder='Your Email'
+            />
+            <div className="footer-btn">
+              <Button 
+                onClick={handleSubcribe}
+                buttonStyle='btn--outline'>
+                Subscribe
+              </Button>
+            </div>
+          </form>
+        </div>
+      </section>
       <div className='footer-links'>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
@@ -86,3 +119,5 @@ export const Footer = () => {
     </div>
   );
 }
+
+export default Footer;
