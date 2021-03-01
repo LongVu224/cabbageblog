@@ -1,7 +1,7 @@
 const initialState = {
     data: [],
     loading: true,
-    fail: false,
+    uploaded: false,
 };
 
 const reducer = (state = initialState, action) => {

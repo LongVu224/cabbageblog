@@ -5,6 +5,12 @@
 /.pnp
 .pnp.js
 
+# env files
+.env
+.firebaserc
+firebase.json
+.firebase
+
 #vscode debug file
 .vscode
 
