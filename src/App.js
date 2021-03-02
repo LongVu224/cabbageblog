@@ -23,7 +23,7 @@ function App() {
   return (
     <div>
       <Switch>
-        <Modal showModal={showModal} setShowModal={setShowModal} />
+        <Modal showModal={showModal} setShowModal={setShowModal}/>
         <Navbar />
         <Route path='/coming' component={Construction} />
         <Route path='/sign-in' component={SignIn} />

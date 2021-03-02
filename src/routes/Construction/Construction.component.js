@@ -23,7 +23,9 @@ const Construction = (props) => {
 
     return (
         <div className="construct-wrap">
-            <Modal showModal={showModal} setShowModal={setShowModal} />
+            <Modal
+                showModal={showModal} 
+                setShowModal={setShowModal} />
             <div className="construct-content">
                 <div className="construct-text">
                     <h1 className="construct-title">COMING SOON</h1>
