@@ -31,6 +31,7 @@ const withErrorHandler = (WrappedComponent, axios) => {
                     <ModalInfo 
                         showModal={this.state.showModal} 
                         setShowModal={() => this.setState({showModal: !this.state.showModal})}
+                        title="Oops"
                         content={this.state.error ? this.state.error.message : null}/>
                     <WrappedComponent {...this.props} />
                 </Aux>

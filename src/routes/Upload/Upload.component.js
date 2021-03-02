@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import  { Redirect } from 'react-router-dom'
 import './Upload.scss';
-// Import React FilePond
 import { FilePond } from 'react-filepond'
-// Import FilePond styles
 import 'filepond/dist/filepond.min.css'
+import { ModalInfo } from '../../components/Modal2/Modal'
 
 const SignIn = (props) => {
     const [title, setTitle] = useState(null)
     const [text, setText] = useState(null)
     const [tag, setTag] = useState(null)
     const [images, setImages] = useState([])
+    const [showModal, setShowModal] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -26,12 +26,24 @@ const SignIn = (props) => {
         window.scrollTo(0, 0)
     })
 
+    useEffect(() => {
+        if(props.upload.uploaded) {
+            setShowModal(true)
+        }
+    },[props.upload.uploaded])
+
     if (props.token.fail) {
         return <Redirect to='/sign-in'/>
     }
 
+
     return (
         <div className="upload-container">
+        <ModalInfo 
+            showModal={showModal} 
+            setShowModal={() => setShowModal(!showModal)}
+            title="Successfully created blog"
+            content="Congrats, another awesome blog is now available"/>
         <div className="upload-form-box">
           <div className="upload-header-form">
             <h4 className="text-center"><i className="fas fa-cloud-upload-alt" style={{fontSize:"70px"}}></i></h4>

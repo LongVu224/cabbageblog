@@ -134,7 +134,7 @@ export const Modal = ({ showModal, setShowModal }) => {
   );
 };
 
-export const ModalInfo = ({ showModal, setShowModal, content }) => {
+export const ModalInfo = ({ showModal, setShowModal, title, content }) => {
   const modalRef = useRef();
 
   const animation = useSpring({
@@ -175,7 +175,7 @@ export const ModalInfo = ({ showModal, setShowModal, content }) => {
           <animated.div style={animation}>
             <ModalInfoWrapper showModal={showModal}>
               <ModalContent>
-                <h1>Oops</h1>
+                <h1>{title}</h1>
                 <p>{content}</p>
               </ModalContent>
               <CloseModalButton
