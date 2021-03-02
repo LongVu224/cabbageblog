@@ -43,7 +43,8 @@ const SignIn = (props) => {
             showModal={showModal} 
             setShowModal={() => setShowModal(!showModal)}
             title="Successfully created blog"
-            content="Congrats, another awesome blog is now available"/>
+            content="Congrats, another awesome blog is now available"
+            img="https://memegenerator.net/img/instances/67230964/congratulations-you-did-it.jpg"/>
         <div className="upload-form-box">
           <div className="upload-header-form">
             <h4 className="text-center"><i className="fas fa-cloud-upload-alt" style={{fontSize:"70px"}}></i></h4>

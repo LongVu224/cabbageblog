@@ -28,16 +28,20 @@ const ModalWrapper = styled.div`
 `;
 
 const ModalInfoWrapper = styled.div`
-  width: 400px;
-  height: 250px;
+  width: 500px;
+  min-height: 250px;
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #fff;
   color: #000;
-  display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
   z-index: 10;
   border-radius: 10px;
+  background-color: #f9c1b1;
+  background-image: linear-gradient(315deg, #f9c1b1 0%, #fb8085 74%);
 `;
 
 
@@ -46,6 +50,14 @@ const ModalImg = styled.img`
   height: 100%;
   border-radius: 10px 0 0 10px;
   background: #000;
+`;
+
+const ModalInfoContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.8;
 `;
 
 const ModalContent = styled.div`
@@ -134,7 +146,7 @@ export const Modal = ({ showModal, setShowModal }) => {
   );
 };
 
-export const ModalInfo = ({ showModal, setShowModal, title, content }) => {
+export const ModalInfo = ({ showModal, setShowModal, title, content, img }) => {
   const modalRef = useRef();
 
   const animation = useSpring({
@@ -174,10 +186,13 @@ export const ModalInfo = ({ showModal, setShowModal, title, content }) => {
         <Background onClick={closeModal} ref={modalRef}>
           <animated.div style={animation}>
             <ModalInfoWrapper showModal={showModal}>
-              <ModalContent>
+              <ModalInfoContent>
                 <h1>{title}</h1>
                 <p>{content}</p>
-              </ModalContent>
+                <img 
+                  src={img}
+                  style={{width: "150px", borderRadius:"5px"}} />
+              </ModalInfoContent>
               <CloseModalButton
                 aria-label='Close modal'
                 onClick={() => setShowModal(prev => !prev)}

@@ -32,7 +32,8 @@ const withErrorHandler = (WrappedComponent, axios) => {
                         showModal={this.state.showModal} 
                         setShowModal={() => this.setState({showModal: !this.state.showModal})}
                         title="Oops"
-                        content={this.state.error ? this.state.error.message : null}/>
+                        content={this.state.error ? this.state.error.message : null}
+                        img="https://writeandrescue.files.wordpress.com/2014/06/oops-cat1.jpg?w=620"/>
                     <WrappedComponent {...this.props} />
                 </Aux>
             );
