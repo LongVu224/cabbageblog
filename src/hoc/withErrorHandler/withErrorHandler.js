@@ -1,21 +1,22 @@
 import React, {Component} from 'react';
 
-import Modal from '../../components/Modal/Modal';
+import { ModalInfo } from '../../components/Modal2/Modal';
 import Aux from '../Auxx/Auxx';
 
 const withErrorHandler = (WrappedComponent, axios) => {
     return class extends Component {
         state = {
-            error: null
+            error: null,
+            showModal: false
         }
 
         componentWillMount () {
             this.reqInterceptor = axios.interceptors.request.use(req => {
-                this.setState({error: null});
+                this.setState({error: null, showModal: false});
                 return req;
             });
             this.resInterceptor = axios.interceptors.response.use(res => res, error => {
-                this.setState({error: error});
+                this.setState({error: error, showModal: true});
             });
         };
 
@@ -24,18 +25,15 @@ const withErrorHandler = (WrappedComponent, axios) => {
             axios.interceptors.response.eject(this.resInterceptor);
         }
 
-        errorConfimedHandler = () => {
-            this.setState({error: null})
-        }
-
         render () {
             return (
                 <Aux>
-                    <Modal 
-                    show={this.state.error}
-                    modalClosed={this.errorConfimedHandler} >
-                       {this.state.error ? this.state.error.message : null}
-                    </Modal>
+                    <ModalInfo 
+                        showModal={this.state.showModal} 
+                        setShowModal={() => this.setState({showModal: !this.state.showModal})}
+                        title="Oops"
+                        content={this.state.error ? this.state.error.message : null}
+                        img="https://writeandrescue.files.wordpress.com/2014/06/oops-cat1.jpg?w=620"/>
                     <WrappedComponent {...this.props} />
                 </Aux>
             );

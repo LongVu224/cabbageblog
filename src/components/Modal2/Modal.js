@@ -27,11 +27,37 @@ const ModalWrapper = styled.div`
   border-radius: 10px;
 `;
 
+const ModalInfoWrapper = styled.div`
+  width: 500px;
+  min-height: 250px;
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  color: #000;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  z-index: 10;
+  border-radius: 10px;
+  background-color: #f9c1b1;
+  background-image: linear-gradient(315deg, #f9c1b1 0%, #fb8085 74%);
+`;
+
+
 const ModalImg = styled.img`
   width: 100%;
   height: 100%;
   border-radius: 10px 0 0 10px;
   background: #000;
+`;
+
+const ModalInfoContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.8;
 `;
 
 const ModalContent = styled.div`
@@ -84,7 +110,6 @@ export const Modal = ({ showModal, setShowModal }) => {
     e => {
       if (e.key === 'Escape' && showModal) {
         setShowModal(false);
-        console.log('I pressed');
       }
     },
     [setShowModal, showModal]
@@ -114,6 +139,65 @@ export const Modal = ({ showModal, setShowModal }) => {
                 onClick={() => setShowModal(prev => !prev)}
               />
             </ModalWrapper>
+          </animated.div>
+        </Background>
+      ) : null}
+    </>
+  );
+};
+
+export const ModalInfo = ({ showModal, setShowModal, title, content, img }) => {
+  const modalRef = useRef();
+
+  const animation = useSpring({
+    config: {
+      duration: 500
+    },
+    opacity: showModal ? 1 : 0,
+    transform: showModal ? `translateY(0%)` : `translateY(-100%)`
+  });
+
+  const closeModal = e => {
+    if (modalRef.current === e.target) {
+      setShowModal(false);
+    }
+  };
+
+  const keyPress = useCallback(
+    e => {
+      if (e.key === 'Escape' && showModal) {
+        setShowModal(false);
+      }
+    },
+    [setShowModal, showModal]
+  );
+
+  useEffect(
+    () => {
+      document.addEventListener('keydown', keyPress);
+      return () => document.removeEventListener('keydown', keyPress);
+    },
+    [keyPress]
+  );
+
+  return (
+    <>
+      {showModal ? (
+        <Background onClick={closeModal} ref={modalRef}>
+          <animated.div style={animation}>
+            <ModalInfoWrapper showModal={showModal}>
+              <ModalInfoContent>
+                <h1>{title}</h1>
+                <p>{content}</p>
+                <img 
+                  src={img}
+                  style={{width: "150px", borderRadius:"5px"}} />
+              </ModalInfoContent>
+              <CloseModalButton
+                aria-label='Close modal'
+                onClick={() => setShowModal(prev => !prev)}
+              />
+            </ModalInfoWrapper>
           </animated.div>
         </Background>
       ) : null}
