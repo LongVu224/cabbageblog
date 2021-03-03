@@ -1,21 +1,51 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '../Button';
 import { Link } from 'react-router-dom';
+import { Dropdown } from '../Dropdown';
 import './Navbar.css';
+import { drop } from 'lodash';
 
 const Navbar = (props) => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
   const [isLogged, setIsLogged] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const dropDownItems = [
+    {
+      title: 'About me',
+      path: '/info'
+    }, 
+    {
+      title: 'Contact us',
+      path: '/contact'
+    }
+  ]
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
     } else {
       setButton(true);
+    }
+  };
+
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
+
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
     }
   };
 
@@ -62,14 +92,18 @@ const Navbar = (props) => {
                 Collections
               </Link>
             </li>
-            <li className='nav-item'>
+            <li 
+              className='nav-item'
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}>
               <Link
                 to='/info'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Info
+                Info <i className='fas fa-caret-down' />
               </Link>
+              {dropdown && <Dropdown items={dropDownItems} />}
             </li>
 
             {!isLogged ? 
