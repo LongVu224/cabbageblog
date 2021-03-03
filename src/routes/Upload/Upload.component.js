@@ -23,10 +23,6 @@ const SignIn = (props) => {
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0)
-    })
-
-    useEffect(() => {
         if(props.upload.uploaded) {
             setShowModal(true)
         }

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import ScrollToTop from './components/helper/ScrollToTop/ScrollToTop';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { Modal } from './components/Modal2/Modal';
@@ -23,6 +24,7 @@ function App() {
   return (
     <div>
       <Switch>
+        <ScrollToTop />
         <Modal showModal={showModal} setShowModal={setShowModal}/>
         <Navbar />
         <Route path='/coming' component={Construction} />

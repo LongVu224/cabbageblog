@@ -11,10 +11,6 @@ const SignIn = (props) => {
         props.onUserSignIn({username: username, password: password})
     }
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    })
-
     if (!props.token.fail) {
         return <Redirect to='/'  />
     }

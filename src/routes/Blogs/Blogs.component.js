@@ -5,7 +5,6 @@ import './Blogs.scss'
 const Blogs = (props) => {
 
     useEffect(() => {
-        window.scrollTo(0,0)
         props.onFetchBlog()
     }, [props.onFetchBlog])
     

@@ -5,7 +5,7 @@ import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware, compose, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
-import history from './components/helper/history';
+import history from './components/helper/History/history';
 
 import App from './App';
 import footerReducer from './components/Footer/Footer.reducer'

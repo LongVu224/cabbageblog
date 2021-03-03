@@ -7,10 +7,6 @@ const Construction = (props) => {
     const [email, setEmail] = useState('')
     const [showModal, setShowModal] = useState(false);
 
-    useEffect(() => {
-        window.scrollTo(0,0)
-    })
-
     const openModal = () => {
         setShowModal(prev => !prev);
     };
