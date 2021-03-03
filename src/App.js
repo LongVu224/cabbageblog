@@ -9,6 +9,7 @@ import Blogs from './routes/Blogs';
 import SignIn from './routes/SignIn';
 import Upload from './routes/Upload';
 import { Info } from './routes/Intro/Info'
+import Contact from './routes/Intro/Contact/Contact.component';
 import { Trailer } from './routes/Trailer';
 import Construction from './routes/Construction';
 import { BrowserRouter as Switch, Route } from 'react-router-dom';
@@ -30,6 +31,7 @@ function App() {
         <Route path='/coming' component={Construction} />
         <Route path='/sign-in' component={SignIn} />
         <Route path='/info' component={Info} />
+        <Route path='/contact' component={Contact} />
         <Route path='/upload' component={Upload} />
         <Route path='/trailer' component={Trailer} />
         <Route path='/blogs' component={Blogs} />
