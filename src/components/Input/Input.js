@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-export const Input = ({ type, placeholder }) => {
+export const Input = ({ type, placeholder, onChange }) => {
   return (
     <Container>
       <StyledInput
+        onChange={onChange}
         placeholder={placeholder && placeholder}
         type={type ? type : "text"}
         required
@@ -15,10 +16,11 @@ export const Input = ({ type, placeholder }) => {
   );
 };
 
-export const TextArea = ({ type, placeholder }) => {
+export const TextArea = ({ type, placeholder, onChange }) => {
     return (
       <Container>
         <StyledTextArea
+          onChange={onChange}
           placeholder={placeholder && placeholder}
           type={type ? type : "text"}
           required

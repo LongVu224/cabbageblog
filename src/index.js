@@ -11,6 +11,7 @@ import App from './App';
 import footerReducer from './components/Footer/Footer.reducer'
 import navbarReducer from './components/Navbar/Navbar.reducer';
 import uploadReducer from './routes/Upload/Upload.reducer';
+import contactReducer from './routes/Intro/Contact/Contact.reducer';
 import constructionReducer from './routes/Construction/Construction.reducer';
 import homeReducer from './routes/Home/Home.reducer';
 import blogsReducer from './routes/Blogs/Blogs.reducer';
@@ -28,7 +29,8 @@ const RootReducer = combineReducers({
     logged: navbarReducer,
     upload: uploadReducer,
     footer: footerReducer,
-    construction: constructionReducer
+    construction: constructionReducer,
+    contact: contactReducer
 })
 
 //apply middleware
