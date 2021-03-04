@@ -5,12 +5,13 @@ import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware, compose, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
-import history from './components/helper/history';
+import history from './components/helper/History/history';
 
 import App from './App';
 import footerReducer from './components/Footer/Footer.reducer'
 import navbarReducer from './components/Navbar/Navbar.reducer';
 import uploadReducer from './routes/Upload/Upload.reducer';
+import contactReducer from './routes/Intro/Contact/Contact.reducer';
 import constructionReducer from './routes/Construction/Construction.reducer';
 import homeReducer from './routes/Home/Home.reducer';
 import blogsReducer from './routes/Blogs/Blogs.reducer';
@@ -28,7 +29,8 @@ const RootReducer = combineReducers({
     logged: navbarReducer,
     upload: uploadReducer,
     footer: footerReducer,
-    construction: constructionReducer
+    construction: constructionReducer,
+    contact: contactReducer
 })
 
 //apply middleware

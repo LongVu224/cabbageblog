@@ -9,7 +9,6 @@ import { Spinner } from '../../components/Spinner'
 const Blog = (props) => {
 
     useEffect(() => {
-        window.scrollTo(0, 0)
         props.onFetchBlog(props.match.params.id)
     }, [props.onFetchBlog])
 

@@ -2,11 +2,6 @@ import React, { useEffect } from 'react'
 import './Info.scss';
 
 export const Info  = () => {
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    })
-
     return (
         <div className="info-root">
             <div className="info-container container">

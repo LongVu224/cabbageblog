@@ -23,10 +23,6 @@ const SignIn = (props) => {
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0)
-    })
-
-    useEffect(() => {
         if(props.upload.uploaded) {
             setShowModal(true)
         }
@@ -44,7 +40,7 @@ const SignIn = (props) => {
             setShowModal={() => setShowModal(!showModal)}
             title="Successfully created blog"
             content="Congrats, another awesome blog is now available"
-            img="https://memegenerator.net/img/instances/67230964/congratulations-you-did-it.jpg"/>
+            img="https://i.pinimg.com/564x/e2/55/a1/e255a1e433105bcbf891060bde64e958.jpg"/>
         <div className="upload-form-box">
           <div className="upload-header-form">
             <h4 className="text-center"><i className="fas fa-cloud-upload-alt" style={{fontSize:"70px"}}></i></h4>

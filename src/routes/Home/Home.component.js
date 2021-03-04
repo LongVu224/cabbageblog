@@ -8,7 +8,6 @@ const Home = (props) => {
     const videoUrl = '/videos/header.mp4'
 
     useEffect(() => {
-        window.scrollTo(0,0)
         props.onFetchBlog()
     }, [props.onFetchBlog])
     
