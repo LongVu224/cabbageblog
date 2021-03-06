@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# Cabbage Blog
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Cabbage Blog](https://cabbageblog-86d8a.web.app/) is a full-featured private blog application that built with React and Redux.
 
-## Available Scripts
+![alt text](https://github.com/LongVu224/cabbageblog/blob/dev/public/images/readme-logo.PNG?raw=true)
 
-In the project directory, you can run:
+Check out live DEMO here: [Link](https://cabbageblog-86d8a.web.app/)
 
-### `yarn start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project is currently in development. Users can check out blogs and collections and see visual data representation. More features will be added soon in future.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Prerequisites
 
-### `yarn test`
+If you want to install the project, [Yarn](https://yarnpkg.com/) is recommended as the dependency to run and build it directly.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Yarn
+```
+npm install yarn -g
+```
 
-### `yarn build`
+### Installing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone down this repository. You will need `yarn` and `npm` installed globally on your machine.  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Installation:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+yarn install
+```
 
-### `yarn eject`
+To Start Server:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+yarn start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To Visit App:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`localhost:3000/`  
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To Build App for production:
 
-## Learn More
+```
+yarn build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Tech/framework used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The project is built with: 
+* React / Redux
+* React-Router
+* React-BootStrap
+* Awesome-Slider
+* And a significant amount of CSS
 
-### Code Splitting
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![alt text](https://github.com/LongVu224/cabbageblog/blob/dev/public/images/readme-s0.PNG?raw=true)
 
-### Analyzing the Bundle Size
+![alt text](https://github.com/LongVu224/cabbageblog/blob/dev/public/images/readme-s1.PNG?raw=true)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Reflection
 
-### Making a Progressive Web App
+This was a long project built with the goals included using technology I have learned up until this point and familiarizing myself with documentation for new features.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+One of the main challenges I was ran into integrating with AWS S3 Storage. This lead me to spent a while on research spike into Multer, AWS credentials and S3 Bucket publication. Due to project time constraints, I implemented few grand features that included Authentication and also focus more on data visualization from parts of API, but there are also several things that needs to spend more time in future included refactoring code.
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Distributed under the MIT License. See `LICENSE` for more information.
 
-### Deployment
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Long Vu Hai - [LinkedIn](https://www.linkedin.com/in/longvu224/) - vuhailong224@gmail.com
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Project Link: [https://github.com/LongVu224/cabbageblog](https://github.com/LongVu224/cabbageblog)
