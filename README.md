@@ -64,7 +64,7 @@ The project is built with:
 
 This was a long project built with the goals included using technology I have learned up until this point and familiarizing myself with documentation for new features.
 
-One of the main challenges I was ran into was integrate with AWS S3 Storage. This lead me to spent a while on research spike into Multer, AWS credentials and S3 Bucket publication. Due to project time constraints, I implemented few grand features that included Authentication and also focus more on data visualization from parts of API, but there are also several things that needs to spend more time in future included refactoring code.
+One of the main challenges I was ran into integrating with AWS S3 Storage. This lead me to spent a while on research spike into Multer, AWS credentials and S3 Bucket publication. Due to project time constraints, I implemented few grand features that included Authentication and also focus more on data visualization from parts of API, but there are also several things that needs to spend more time in future included refactoring code.
 
 ## License
 
