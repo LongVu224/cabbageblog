@@ -104,6 +104,11 @@
     padding: 15px;
     margin-right: 20px;
     text-align: center;
+    transition: all 0.2s ease-in;
+    outline: none;
+    &:hover {
+      transform: translateY(-3px);
+    }
 }
 
 .construct-button {
@@ -115,4 +120,9 @@
     color: white;
     background-color: #f6f0c4;
     background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
+    outline: none;
+    transition: all 0.2s ease-in;
+    &:hover {
+      transform: translateY(-3px);
+    }
 }
