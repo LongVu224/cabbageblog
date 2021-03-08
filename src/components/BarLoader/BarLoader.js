@@ -11,7 +11,7 @@ const overrideStyle = css`
 export const Bar = (props) => {
     return (
         <div>
-            <BarLoader color={"#4A4A4A"} loading={props.loading} width={200} css={overrideStyle} size={100} />
+            <BarLoader color={"#4A4A4A"} loading={props.loading} width={250} css={overrideStyle} size={100} />
         </div>
     )
 }
