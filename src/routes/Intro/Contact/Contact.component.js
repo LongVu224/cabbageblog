@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { ModalInfo } from '../../../components/Modal2/Modal'
 import { Input, TextArea } from "../../../components/Input";
-import BarLoader from "react-spinners/BarLoader";
-import { css } from "@emotion/core";
+import { Bar } from "../../../components/BarLoader";
 import './Contact.scss'
-
-const overrideStyle = css`
-    display: block;
-    margin: 0 auto;
-    border-color: red;
-    z-index: -1;
-`;
 
 const Contact = (props) => {
 
@@ -67,7 +59,7 @@ const Contact = (props) => {
                             placeholder="Message" 
                             onChange={(e) => setMessage(e.target.value)} />
                         <button onClick={handleSubmit}>Submit</button>
-                        <BarLoader color={"#4A4A4A"} loading={props.contact.loading} width={200} css={overrideStyle} size={100} />
+                        <Bar loading={props.contact.loading} />
                         </div>
                     </div>
                     <div className="contact-title">

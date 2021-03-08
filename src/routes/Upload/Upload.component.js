@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"
 import  { Redirect } from 'react-router-dom'
 import './Upload.scss';
 import { FilePond } from 'react-filepond'
 import 'filepond/dist/filepond.min.css'
 import { ModalInfo } from '../../components/Modal2/Modal'
+import { Bar } from '../../components/BarLoader'
 
 const SignIn = (props) => {
     const [title, setTitle] = useState(null)
@@ -85,6 +86,7 @@ const SignIn = (props) => {
                 />
             </div>
                 <button type="submit" className="btn btn-secondary btn-block upload-button" >Upload</button>
+                <Bar loading={props.upload.loading} />
             </form>
           </div>
         </div>

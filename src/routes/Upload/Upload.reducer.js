@@ -1,6 +1,6 @@
 const initialState = {
     data: [],
-    loading: true,
+    loading: false,
     uploaded: false,
 };
 
