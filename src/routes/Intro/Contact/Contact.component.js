@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { ModalInfo } from '../../../components/Modal2/Modal'
 import { Input, TextArea } from "../../../components/Input";
-import { Link } from 'react-router-dom';
+import { Bar } from "../../../components/BarLoader";
 import './Contact.scss'
 
 const Contact = (props) => {
@@ -43,12 +43,6 @@ const Contact = (props) => {
             <div className="contact-root">
                 <div className="contact-wrap container">
                     <div className="contact-side">
-                        <div>
-                        <Link to='/' className='social-logo contact-side-logo'>
-                            Cabbage 
-                            <i className='fas fa-paw' />
-                        </Link>
-                        </div>
                         <div className="contact-side-form">
                         <h3>Get in touch with Cabbage</h3>
                         <Input 
@@ -65,6 +59,7 @@ const Contact = (props) => {
                             placeholder="Message" 
                             onChange={(e) => setMessage(e.target.value)} />
                         <button onClick={handleSubmit}>Submit</button>
+                        <Bar loading={props.contact.loading} />
                         </div>
                     </div>
                     <div className="contact-title">
