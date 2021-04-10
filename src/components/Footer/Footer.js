@@ -48,8 +48,8 @@ const Footer = (props) => {
           </div>
           <div className='footer-link-items'>
             <h2>Contact Me</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
+            <Link to='/contact'>Contact</Link>
+            <Link to='/coming'>Support</Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
