@@ -31,8 +31,8 @@ const ModalInfoWrapper = styled.div`
   width: 500px;
   min-height: 250px;
   height: auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 30px;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: #fff;
   color: #000;
