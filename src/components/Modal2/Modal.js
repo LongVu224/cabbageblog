@@ -58,6 +58,8 @@ const ModalInfoContent = styled.div`
   justify-content: center;
   align-items: center;
   line-height: 1.8;
+  padding-left: 20px;
+  padding-right: 20px;
 `;
 
 const ModalContent = styled.div`
@@ -191,7 +193,7 @@ export const ModalInfo = ({ showModal, setShowModal, title, content, img }) => {
                 <p>{content}</p>
                 <img 
                   src={img}
-                  style={{width: "150px", borderRadius:"5px"}} />
+                  style={{width: "200px", borderRadius:"5px"}} />
               </ModalInfoContent>
               <CloseModalButton
                 aria-label='Close modal'
