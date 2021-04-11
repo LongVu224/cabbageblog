@@ -11,6 +11,17 @@ const Contact = (props) => {
     const [subject, setSubject] = useState('')
     const [message, setMessage] = useState('')
     const [showModal, setShowModal] = useState(false)
+    const [showModalError, setShowModalError] = useState(false)
+
+    const modalError = (
+        <ModalInfo 
+            showModal={showModalError}
+            setShowModal={() => setShowModalError(!showModalError)}
+            title="Oops"
+            content="We are sorry that our Email system is currently down. You can contact us by email: vuhailong224@gmail.com"
+            img="https://i.chzbgr.com/full/9347829760/hBCBC6D9E/sorry"
+        />
+    )
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -32,8 +43,13 @@ const Contact = (props) => {
         }
     },[props.contact.sent])
 
+    useEffect(() => {
+        setShowModalError(true)
+    },[])
+
     return(
         <div>
+            {modalError}
             <ModalInfo 
                 showModal={showModal} 
                 setShowModal={() => setShowModal(!showModal)}
