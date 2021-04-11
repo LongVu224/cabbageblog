@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './Cards.css';
 import CardItem from './CardItem';
+import { Spinner } from '../Spinner';
 
 export const Cards = (props) => {
   const [cardList, setCardList] = useState(null)
@@ -48,9 +49,12 @@ export const Cards = (props) => {
     <div className='cards'>
       <h1>Check out my PURFECT Collections!</h1>
       <div className='cards__container'>
-        <div className='cards__wrapper'>
-          {cardList}
-        </div>
+        {props.loading ? 
+          <Spinner /> : 
+          <div className='cards__wrapper'>
+            {cardList}
+          </div>
+        }
       </div>
     </div>
   );
