@@ -51,7 +51,7 @@ const Navbar = (props) => {
 
   useEffect(() => {
     showButton();
-    if(props.token.data.length > 0) {
+    if(localStorage.getItem('token')) {
       setIsLogged(true)
     }
   }, [props.token.data]);

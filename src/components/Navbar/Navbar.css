@@ -36,6 +36,7 @@ a.navbar-logo {
 }
 
 .nav-menu {
+  height: 90px;
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-gap: 10px;
