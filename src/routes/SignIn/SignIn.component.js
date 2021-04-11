@@ -36,7 +36,7 @@ const SignIn = (props) => {
             </div>
             <div className="input-group mb-3">
                 <div className="input-group-prepend">
-                    <span className="input-group-text"><i class="fa fa-lock"></i></span>
+                    <span className="input-group-text"><i className="fa fa-lock"></i></span>
                 </div>
                 <input  type="password" 
                         className="form-control" 

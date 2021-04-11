@@ -29,7 +29,7 @@ const SignIn = (props) => {
         }
     },[props.upload.uploaded])
 
-    if (props.token.fail) {
+    if (!localStorage.getItem('token')) {
         return <Redirect to='/sign-in'/>
     }
 
