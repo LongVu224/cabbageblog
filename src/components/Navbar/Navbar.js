@@ -3,7 +3,6 @@ import { Button } from '../Button';
 import { Link } from 'react-router-dom';
 import { Dropdown } from '../Dropdown';
 import './Navbar.css';
-import { drop } from 'lodash';
 
 const Navbar = (props) => {
   const [click, setClick] = useState(false);
