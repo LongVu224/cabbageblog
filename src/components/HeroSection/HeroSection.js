@@ -9,7 +9,7 @@ export const HeroSection = (props) => {
       {props.img ? <img alt='' className="hero-image" src={props.img} /> : null}
       {props.video ? <video src={props.video} autoPlay loop muted/> : null}
       <p>All you need is</p>
-      <h1>LOVE AND A CAT</h1>
+      <h1>Love And A Cat</h1>
       <div className='hero-btns'>
         <Button
           className='btns'
@@ -17,7 +17,7 @@ export const HeroSection = (props) => {
           buttonSize='btn--large'
           path='/trailer'
         >
-          WATCH TRAILER <i className='far fa-play-circle' />
+          Watch Trailer <i className='far fa-play-circle' />
         </Button>
       </div>
     </div>

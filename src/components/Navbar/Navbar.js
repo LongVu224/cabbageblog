@@ -9,6 +9,8 @@ const Navbar = (props) => {
   const [button, setButton] = useState(true);
   const [isLogged, setIsLogged] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const [navbarColor, setNavbarColor] = useState('transparent');
+  const [navbarHeight, setNavbarHeight] = useState(0);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -48,6 +50,20 @@ const Navbar = (props) => {
     }
   };
 
+  const listenScrollEvent = (event) => {
+    if (window.scrollY < 73) {
+      setNavbarColor('transparent');
+      setNavbarHeight(0);
+    } else if (window.scrollY > 70) {
+      setNavbarColor('#242424');
+      setNavbarHeight(80);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', listenScrollEvent);
+  }, []);
+
   useEffect(() => {
     showButton();
     if(localStorage.getItem('token')) {
@@ -59,7 +75,7 @@ const Navbar = (props) => {
 
   return (
     <>
-      <nav className='navbar'>
+      <nav className='navbar' style={{backgroundColor: navbarColor, height: navbarHeight}}>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             Cabbage <i className='fas fa-paw' />
