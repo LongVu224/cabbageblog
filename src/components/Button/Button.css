@@ -23,6 +23,7 @@
   border: 1px solid var(--primary);
   transition: all 0.3s ease-out;
   margin-bottom: 55px;
+  white-space: nowrap;
 }
 
 .btn--medium {

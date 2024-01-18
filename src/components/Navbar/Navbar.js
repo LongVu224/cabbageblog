@@ -146,7 +146,7 @@ const Navbar = (props) => {
             <Button path='/upload' buttonStyle='btn--outline'>Upload Blog</Button>
             : null }
           {button && !isLogged ? 
-            <Button path='/sign-in' buttonStyle='btn--outline'>SIGN IN</Button>
+            <Button path='/sign-in' buttonStyle='btn--outline'>Sign In</Button>
             : null }
         </div>
       </nav>
