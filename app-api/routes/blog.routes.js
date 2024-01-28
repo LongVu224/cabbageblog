@@ -5,60 +5,44 @@ let express = require('express'),
     { v4: uuidV4 } = require('uuid'),
     AWS = require('aws-sdk'),
     fs = require('fs'),
-    multerS3 = require('multer-s3'),
+    { MulterAzureStorage  } = require('multer-azure-blob-storage'),
     router = express.Router();
 const config = require("../config/config");
 
-const s3 = new AWS.S3({
-    accessKeyId: config.awsId,
-    secretAccessKey: config.awsSecret
+const resolveBlobName = (req, file) => {
+    return new Promise((resolve, reject) => {
+        const fileName = file.originalname.toLowerCase().split(' ').join('-');
+        const blobName = uuidV4() + '-' + fileName;
+        resolve(blobName);
+    });
+};
+
+const resolveMetadata = (req, file) => {
+    return new Promise((resolve, reject) => {
+        const metadata = {fieldName: file.fieldname};
+        resolve(metadata);
+    });
+};
+
+const connectionString = `DefaultEndpointsProtocol=https;AccountName=${config.storageName};AccountKey=${config.storageKey};EndpointSuffix=core.windows.net`
+
+const azureStorage = new MulterAzureStorage({
+    connectionString: connectionString,
+    accessKey: config.storageKey,
+    accountName: config.storageName,
+    containerName: 'images',
+    blobName: resolveBlobName,
+    metadata: resolveMetadata,
 });
 
-const BUCKET_NAME = 'cabbage-static';
-
-/*local storage
-
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, DIR);
-    },
-    filename: (req, file, cb) => {
-        const fileName = file.originalname.toLowerCase().split(' ').join('-');
-        cb(null, uuidV4() + '-' + fileName)
-    }
+const upload = multer({
+    storage: azureStorage
 });
-
-var upload = multer({
-    storage: storage,
-    fileFilter: (req, file, cb) => {
-        if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg" || file.mimetype == "image/jfif") {
-            cb(null, true);
-        } else {
-            cb(null, false);
-            return cb(new Error('Only .png, .jpg, .jpeg and .jfif format allowed!'));
-        }
-    }
-}); */
-
-const uploadS3 = multer({
-    storage: multerS3({
-      s3: s3,
-      bucket: BUCKET_NAME,
-      acl: 'public-read',
-      metadata: function (req, file, cb) {
-        cb(null, {fieldName: file.fieldname});
-      },
-      key: function (req, file, cb) {
-        const fileName = file.originalname.toLowerCase().split(' ').join('-');
-        cb(null, uuidV4() + '-' + fileName)
-      }
-    })
-  })
 
 // Blog model
 let Blog = require('../models/Blog');
 
-router.post('/', uploadS3.array('blogImg', 10), (req, res, next) => {
+router.post('/', upload.array('blogImg', 10), (req, res, next) => {
     console.log(req)
     const url = req.protocol + '://' + req.get('host')
     const curDate = moment().format('MMMM Do YYYY, h:mm:ss a')
@@ -67,7 +51,7 @@ router.post('/', uploadS3.array('blogImg', 10), (req, res, next) => {
         title: req.body.title,
         tag: req.body.tag,
         text: req.body.text,
-        blogImg: req.files.map(file => file.location),
+        blogImg: req.files.map(file => file.blobName),
         date: curDate,
     });
     blog.save().then(result => {
