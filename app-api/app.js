@@ -2,7 +2,6 @@ let express = require('express'),
     mongoose = require('mongoose'),
     cors = require('cors'),
     bodyParser = require('body-parser'),
-    dbConfig = require('./database/db'),
     passport = require('passport'),
     LocalStrategy = require('passport-local'),
     passportJWT = require("passport-jwt"),
@@ -12,12 +11,13 @@ let express = require('express'),
 const blogApi = require('./routes/blog.routes')
 const userApi = require('./routes/user.routes')
 const subcribeApi = require('./routes/subcribe.routes')
+const config = require("./config/config");
 
 const JWTStrategy = passportJWT.Strategy
 
 // MongoDB Configuration
 mongoose.Promise = global.Promise;
-mongoose.connect(dbConfig.db, {
+mongoose.connect(config.dbConnection, {
     useNewUrlParser: true
 }).then(() => {
     console.log('Database sucessfully connected')

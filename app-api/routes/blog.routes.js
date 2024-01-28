@@ -7,15 +7,11 @@ let express = require('express'),
     fs = require('fs'),
     multerS3 = require('multer-s3'),
     router = express.Router();
-
-const DIR = './public/';
-
-const ID = 'AKIAQ245OLNHPF46UOPJ';
-const SECRET = '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';
+const config = require("../config/config");
 
 const s3 = new AWS.S3({
-    accessKeyId: ID,
-    secretAccessKey: SECRET
+    accessKeyId: config.awsId,
+    secretAccessKey: config.awsSecret
 });
 
 const BUCKET_NAME = 'cabbage-static';
