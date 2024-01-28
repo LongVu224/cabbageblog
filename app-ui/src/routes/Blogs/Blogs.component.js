@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Spinner } from "../../components/Spinner"
 import './Blogs.scss'
+import { getImgUrl } from '../../components/helper/helper'
 
 const Blogs = (props) => {
 
@@ -19,7 +20,7 @@ const Blogs = (props) => {
                     <a href={'/blog/' + blog._id}>
                     <div className="blog-overlay"></div>
                     <div className="blog-icon">
-                        <img className="blog-img" src={blog.blogImg ? blog.blogImg[0] : null} />
+                        <img className="blog-img" src={blog.blogImg ? getImgUrl(blog.blogImg[0]) : null} />
                     </div>
                     <div class="blog-content">
                         <h3>{blog.title}</h3>

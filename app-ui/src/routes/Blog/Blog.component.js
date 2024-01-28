@@ -5,6 +5,7 @@ import 'react-awesome-slider/dist/styles.css';
 import './Blog.scss';
 import Badge from 'react-bootstrap/Badge'
 import { Spinner } from '../../components/Spinner'
+import { getImgUrl } from '../../components/helper/helper'
 
 const Blog = (props) => {
 
@@ -18,7 +19,7 @@ const Blog = (props) => {
         <AwesomeSlider cssModule={AwesomeSliderStyles}>
             {blogImg ? blogImg.map(img => (
                 <div className="">
-                    <img alt='' className='blog-image' src={img} />
+                    <img alt='' className='blog-image' src={getImgUrl(img)} />
                 </div>
             )) : null}
         </AwesomeSlider>
